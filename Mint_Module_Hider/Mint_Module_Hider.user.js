@@ -9,7 +9,6 @@
 window.setTimeout(init, 5000);
 
 function init() {
-console.log('starting!');
   var advice = '#module-advice ';
   var credit = '#module-credit-score ';
   var style = '{display:none !important;}';
@@ -18,14 +17,10 @@ console.log('starting!');
 }
 
 function setStyle(styleString) {
-  console.log('setting style!');
   var elem = document.getElementById('module-advice');
-  console.log('looking for elem!');
   if (!elem) {
-    console.log('did not find it!');
     return;
   }
-  console.log('found it!');
   var newStyle = document.createElement('style');
   newStyle.type = 'text/css';
   newStyle.innerHTML = styleString;
