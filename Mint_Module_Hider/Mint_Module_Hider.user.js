@@ -1,5 +1,5 @@
 // ==UserScript==
-// @name        Mint
+// @name        Mint Module Hider
 // @namespace   rucker@github
 // @description Mint Module Hider
 // @include     https://wwws.mint.com/*
@@ -9,15 +9,15 @@
 window.setTimeout(init, 5000);
 
 function init() {
-  var advice = '#module-advice ';
-  var credit = '#module-credit-score ';
+  var advice = 'module-advice';
+  var credit = 'module-credit-score';
   var style = '{display:none !important;}';
-  setStyle(advice + style);
-  setStyle(credit + style); 
+  setStyle(advice, '#' + advice + ' ' + style);
+  setStyle(credit, '#' + credit + ' ' + style); 
 }
 
-function setStyle(styleString) {
-  var elem = document.getElementById('module-advice');
+function setStyle(selector, styleString) {
+  var elem = document.getElementById(selector);
   if (!elem) {
     return;
   }
