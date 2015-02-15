@@ -3,28 +3,16 @@
 // @namespace   rucker@github
 // @description Mint Module Hider
 // @include     https://wwws.mint.com/*
-// @version     1
+// @require  http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js
+// @require  https://gist.github.com/raw/2625891/waitForKeyElements.js
+// @version     2
 // @grant       none
-
-window.setTimeout(init, 5000);
-
-function init() {
-  var advice = 'module-advice';
-  var credit = 'module-credit-score';
-  var style = '{display:none !important;}';
-  setStyle(advice, '#' + advice + ' ' + style);
-  setStyle(credit, '#' + credit + ' ' + style); 
-}
-
-function setStyle(selector, styleString) {
-  var elem = document.getElementById(selector);
-  if (!elem) {
+waitForKeyElements('#module-advice', setStyle);
+waitForKeyElements('#module-credit-score', setStyle);
+function setStyle(jNode) {
+  if (!jNode) {
     return;
   }
-  var newStyle = document.createElement('style');
-  newStyle.type = 'text/css';
-  newStyle.innerHTML = styleString;
-  elem.appendChild(newStyle);
+  jNode.css('display', 'none');
 }
-
 // ==/UserScript==
