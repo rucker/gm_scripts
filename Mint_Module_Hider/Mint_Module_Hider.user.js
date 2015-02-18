@@ -7,6 +7,7 @@
 // @require     https://gist.github.com/raw/2625891/waitForKeyElements.js
 // @version     2
 // @grant       none
+this.$ = this.jQuery = jQuery.noConflict(true);
 waitForKeyElements('#module-advice', setStyle);
 waitForKeyElements('#module-credit-score', setStyle);
 function setStyle(jNode) {
