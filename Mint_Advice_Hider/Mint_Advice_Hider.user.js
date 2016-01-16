@@ -1,7 +1,7 @@
 // ==UserScript==
-// @name        Mint Module Hider
+// @name        Mint Advice Hider
 // @namespace   rucker@github
-// @description Mint Module Hider
+// @description This script will hide certain screen-hogging elements in the mint.com UI.
 // @include     https://wwws.mint.com/overview.event
 // @require     https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js
 // @require     https://gist.github.com/raw/2625891/waitForKeyElements.js
