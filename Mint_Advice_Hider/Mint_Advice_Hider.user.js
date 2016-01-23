@@ -7,7 +7,8 @@
 // @require     https://gist.github.com/raw/2625891/waitForKeyElements.js
 // @run-at      document-idle
 // @grant	none
-// @version     3
+// @updateURL	https://raw.githubusercontent.com/rucker/gm_scripts/master/Mint_Advice_Hider/Mint_Advice_Hider.user.js
+// @version     3.0.1
 // ==/UserScript==
 
 this.$ = this.jQuery = jQuery.noConflict(true);
