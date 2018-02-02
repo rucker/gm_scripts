@@ -8,11 +8,11 @@
 // @run-at      document-idle
 // @grant	none
 // @updateURL	https://raw.githubusercontent.com/rucker/gm_scripts/master/Mint_Advice_Hider/Mint_Advice_Hider.user.js
-// @version     3.1.1
+// @version     3.2.0
 // ==/UserScript==
 
 this.$ = this.jQuery = jQuery.noConflict(true);
-var nodes = ['.adviceWidget', '.creditScoreWidget']
+var nodes = ['.adviceWidget', '.creditScoreWidget', '.HypothesisTestingView'];
 $.each(nodes, function(index, value) {
   waitForKeyElements(value, function() {
     $(value).remove();
